@@ -69,3 +69,8 @@
 .login-btn{
     padding: 0 10px;
 }
+
+.user-card {
+    padding: 10px;
+    border: 1px solid gray;
+}
