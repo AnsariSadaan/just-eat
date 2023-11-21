@@ -11,6 +11,7 @@ const Body = () => {
     const [searchInput, setSearchInput] = useState('');
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
+    console.log(listOfRestaurants)
     useEffect(() => {
         fetchData();
     }, [])
@@ -32,23 +33,32 @@ const Body = () => {
 
     return listOfRestaurants?.length === 0 ? (<Shimmer />) : (
         <div className="body">
-            <div className="filter">
-                <div className="searchBar">
-                    <input type="text" placeholder="search.." value={searchInput} onChange={(e) => { setSearchInput(e.target.value) }} />
-                    <button onClick={() => {
+            <div className="filter flex">
+                <div className="searchBar m-4 p-4">
+                    <input type="text" className="border border-solid py-1 border-pink-100 rounded-sm" placeholder="search.." value={searchInput} onChange={(e) => { setSearchInput(e.target.value) }} />
+                    <button className="px-4 py-1 m-4 bg-pink-100 rounded-lg" onClick={() => {
                         const filteredRestaurant = listOfRestaurants.filter(rest => rest.info.name.toLowerCase().includes(searchInput.toLowerCase()));
                         setFilteredRestaurant(filteredRestaurant)
                     }}>Search</button>
                 </div>
-                <button className="filter-btn" onClick={() => {
+                <div className="searchBar p-4 flex items-center">
+                <button className="px-4 py-1 bg-gray-100 rounded-lg" onClick={() => {
                     const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4);
                     setFilteredRestaurant(filteredList)
                 }}>Top Rated Restaurants</button>
             </div>
-            <div className="res-container">
-                {
+            </div>
+            <div className="flex flex-wrap">
+                {/* {
                     filteredRestaurant.map((restaurant) => (
                         <Link to={'/restaurants/' + restaurant?.info?.id}><RestaurantCard key={restaurant?.info?.id} resData={restaurant} /></Link>
+                    ))
+                } */}
+                {
+                    filteredRestaurant.map((restaurant) => (
+                        <Link key={restaurant?.info?.id} to={'/restaurants/' + restaurant?.info?.id}>
+                            <RestaurantCard resData={restaurant} />
+                        </Link>
                     ))
                 }
             </div>
