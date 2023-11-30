@@ -13,15 +13,15 @@ const Body = () => {
 
     const RestaurantCardBestSeller = withBestSellerLabel(RestaurantCard);
 
-    // console.log(listOfRestaurants)
+    console.log(listOfRestaurants)
     useEffect(() => {
         fetchData();
     }, [])
 
 
     const fetchData = async () => {
-        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9777315&lng=72.8273249&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3609976&lng=78.4730632&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9777315&lng=72.8273249&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3609976&lng=78.4730632&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         //optional chaining
         setListOfRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -65,6 +65,17 @@ const Body = () => {
                         </Link>
                     ))
                 }
+                {/* {filteredRestaurant ? (
+                    filteredRestaurant.map((restaurant) => (
+                        <Link key={restaurant?.info?.id} to={'/restaurants/' + restaurant?.info?.id}>
+                            {restaurant.info.avgRating > 4.1 ? (
+                                <RestaurantCardBestSeller resData={restaurant} />
+                            ) : (
+                                <RestaurantCard resData={restaurant} />
+                            )}
+                        </Link>
+                    ))
+                ) : null} */}
             </div>
         </div>
     )

@@ -25,7 +25,7 @@
 // RestaurantCategory.js
 // import Shimmer from "./Shimmer";
 // import { useState } from "react";
-import ItemList from "./itemList";
+import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, onClick, Dummy }) => {
     return (
@@ -34,7 +34,7 @@ const RestaurantCategory = ({ data, showItems, onClick, Dummy }) => {
                 <span className="font-bold text-lg">{data.title} ({data.itemCards.length})</span>
                 <span>{showItems ? "🔼" : "🔽"}</span>
             </div>
-            {showItems && <ItemList items={data.itemCards} Dummy={Dummy} />}
+            {showItems && <ItemList items={data.itemCards} />}
         </div>
     );
 };

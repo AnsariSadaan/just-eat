@@ -39,7 +39,6 @@ const RestaurantMenu = () => {
     const { resId } = useParams();
     const resInfo = useRestaurantMenu(resId);
     const [openIndex, setOpenIndex] = useState(0); // Track the index of the currently open accordion
-    const Dummy = 'Dummy Data';
     if (resInfo === null) return <Shimmer />;
     const { name, cuisines, costForTwoMessage } = resInfo?.cards[0]?.card?.card?.info;
     const categories = resInfo?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -64,7 +63,6 @@ const RestaurantMenu = () => {
                     data={category?.card?.card}
                     showItems={index === openIndex}
                     onClick={() => handleCategoryClick(index)}
-                    Dummy={Dummy}
                 />
             ))}
         </div>
