@@ -1,0 +1,122 @@
+{
+    "info": {
+        "id": "612823",
+        "name": "Dabba Garam (Homestyle,Combo, Thali & More)",
+        "cloudinaryImageId": "pxfycmnuj2ly0g0y3ppo",
+        "locality": "Rm Sonawane Chawl",
+        "areaName": "Worli",
+        "costForTwo": "₹150 for two",
+        "cuisines": [
+            "Home Food",
+            "North Indian",
+            "Thalis"
+        ],
+        "avgRating": 4.3,
+        "veg": true,
+        "feeDetails": {
+            "restaurantId": "612823",
+            "fees": [
+                {
+                    "name": "BASE_DISTANCE",
+                    "fee": 4800
+                },
+                {
+                    "name": "BASE_TIME"
+                },
+                {
+                    "name": "ANCILLARY_SURGE_FEE"
+                }
+            ],
+            "totalFee": 4800
+        },
+        "parentId": "67608",
+        "avgRatingString": "4.3",
+        "totalRatingsString": "1K+",
+        "sla": {
+            "deliveryTime": 34,
+            "lastMileTravel": 3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "34 mins",
+            "lastMileTravelString": "3.0 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2023-12-04 22:50:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "v1695133679/badges/Pure_Veg111.png",
+                    "description": "pureveg"
+                }
+            ],
+            "textExtendedBadges": [
+                {
+                    "iconId": "guiltfree/GF_Logo_android_3x",
+                    "shortDescription": "options available",
+                    "fontColor": "#7E808C"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "pureveg",
+                                "imageId": "v1695133679/badges/Pure_Veg111.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "",
+                                "fontColor": "#7E808C",
+                                "iconId": "guiltfree/GF_Logo_android_3x",
+                                "shortDescription": "options available"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "15% OFF",
+            "subHeader": "UPTO ₹45"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-5f8964b8-eb7d-4175-9aec-73409adbbad0"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/dabba-garam-homestyle-combo-thali-and-more-rm-sonawane-chawl-worli-mumbai-612823",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

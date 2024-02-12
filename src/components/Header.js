@@ -12,7 +12,7 @@ export const Header = () => {
     const {loggedInUser} = useContext(UserContext);
     //subscribing to the store using a selector
     const cartItem = useSelector((store)=>store.cart.items);
-    console.log(cartItem);
+    // console.log(cartItem);
     return (
         <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-100 lg:bg-green-100">
             <div className="logo">

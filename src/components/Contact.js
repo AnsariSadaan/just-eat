@@ -3,10 +3,14 @@
 const Contact = () => {
   
   return (
-    <>
-    <div>Contact</div>
-    <h1>This is contact us page from /contact</h1>
-    </>
+    <div>
+      <h1 className="font-bold text-3xl p-4 m-4">Contact Us Page</h1>
+      <form action="">
+        <input type="text" className="border border-black p-2 m-2" placeholder="Name" />
+        <input type="text" className="border border-black p-2 m-2" placeholder="Enter Your Message" />
+        <button className="border border-black p-2 m-2 bg-gray-200 rounded-lg">Submit</button>
+      </form>
+    </div>
   )
 }
 

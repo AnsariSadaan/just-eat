@@ -21,11 +21,11 @@ const Body = () => {
 
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9777315&lng=72.8273249&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3609976&lng=78.4730632&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
+        console.log(json);
         //optional chaining
-        setListOfRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
 
     const onlineStatus = useOnlineStatus();
@@ -40,15 +40,15 @@ const Body = () => {
         <div className="body">
             <div className="filter flex">
                 <div className="searchBar m-4 p-4">
-                    <input type="text" className="border border-solid py-1 border-pink-100 rounded-sm" placeholder="search.." value={searchInput} onChange={(e) => { setSearchInput(e.target.value) }} />
-                    <button className="px-4 py-1 m-4 bg-pink-100 rounded-lg" onClick={() => {
+                    <input data-testid="searchInput" type="text" className="border border-solid py-1 border-pink-100 rounded-sm" placeholder="Search.." value={searchInput} onChange={(e) => { setSearchInput(e.target.value) }} />
+                    <button name="Search" className="px-4 py-1 m-4 bg-pink-100 rounded-lg" onClick={() => {
                         const filteredRestaurant = listOfRestaurants.filter(rest => rest.info.name.toLowerCase().includes(searchInput.toLowerCase()));
                         setFilteredRestaurant(filteredRestaurant)
                     }}>Search</button>
                 </div>
                 <div className="searchBar p-4 flex items-center">
                     <button className="px-4 py-1 bg-gray-100 rounded-lg" onClick={() => {
-                        const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4);
+                        const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5);
                         setFilteredRestaurant(filteredList)
                     }}>Top Rated Restaurants</button>
                 </div>
@@ -57,7 +57,7 @@ const Body = () => {
                     <input type="text" className="border mx-4 border-solid px-1 border-pink-100 rounded-sm" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)} />
                 </div>
             </div>
-            <div className="flex flex-wrap">
+            {/* <div className="flex flex-wrap">
                 {
                     filteredRestaurant.map((restaurant) => (
                         <Link key={restaurant?.info?.id} to={'/restaurants/' + restaurant?.info?.id}>
@@ -65,20 +65,30 @@ const Body = () => {
                         </Link>
                     ))
                 }
-                {/* {filteredRestaurant ? (
+                
+            </div> */}
+            <div className="flex flex-wrap">
+                {/* {filteredRestaurant && filteredRestaurant.map((restaurant) => (
+                    <Link key={restaurant?.info?.id} to={'/restaurants/' + restaurant?.info?.id}>
+                        {restaurant.info.avgRating > 4.1 ? (<RestaurantCardBestSeller resData={restaurant} />) : (<RestaurantCard resData={restaurant} />)}
+                    </Link>
+                ))} */}
+                {filteredRestaurant ? (
                     filteredRestaurant.map((restaurant) => (
                         <Link key={restaurant?.info?.id} to={'/restaurants/' + restaurant?.info?.id}>
-                            {restaurant.info.avgRating > 4.1 ? (
+                            {restaurant.info.avgRating > 4.5 ? (
                                 <RestaurantCardBestSeller resData={restaurant} />
                             ) : (
                                 <RestaurantCard resData={restaurant} />
                             )}
                         </Link>
                     ))
-                ) : null} */}
+                ) : null}
             </div>
+
         </div>
     )
 }
 
 export default Body;
+
