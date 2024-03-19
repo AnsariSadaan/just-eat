@@ -37,8 +37,8 @@ const Body = () => {
 
 
     return listOfRestaurants?.length === 0 ? (<Shimmer />) : (
-        <div className="body">
-            <div className="filter flex">
+        <div>
+            <div className="flex">
                 <div className="searchBar m-4 p-4">
                     <input data-testid="searchInput" type="text" className="border border-solid py-1 pl-1 border-pink-100 rounded-sm" placeholder="Search.." value={searchInput} onChange={(e) => { setSearchInput(e.target.value) }} />
                     <button name="Search" className="px-4 py-1 m-4 bg-pink-100 rounded-lg" onClick={() => {

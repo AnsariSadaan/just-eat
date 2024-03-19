@@ -13,15 +13,15 @@ class About extends React.Component {
   render(){
     return (
       <>
-        <div>About</div>
-        <div>
+        <div className="text-3xl flex justify-center items-center">About</div>
+        {/* <div>
           loggedIn User : <UserContext.Consumer>
             {({ loggedInUser }) => <h1 className="text-xl font-bold">{loggedInUser}</h1>}
           </UserContext.Consumer>
           
         </div>
         <h1>This is about page from /about</h1>
-        <User name={"Ansari Sadaan (function)"} />
+        <User name={"Ansari Sadaan (function)"} /> */}
       </>
     ) 
   }
