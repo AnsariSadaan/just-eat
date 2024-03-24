@@ -1,4 +1,4 @@
-export const LOGO_URL = "https://img.freepik.com/free-vector/food-logo-background_1390-72.jpg?w=740&t=st=1700462941~exp=1700463541~hmac=1c0dd9233e9d1de295740ef9b01c87267a4de000769145df737e9d6757db4b97";
+export const LOGO_URL = "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/f8/29/ac/f829ace6-7c50-578c-bc9f-b0cecef71240/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png";
 
 export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
 

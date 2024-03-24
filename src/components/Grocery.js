@@ -1,6 +1,6 @@
 const Grocery = ()=> {
     return (
-        <h1>comming sson</h1>
+        <div className="text-3xl flex justify-center items-center">Working on this Page</div>
 )}
 
 export default Grocery;
