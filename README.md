@@ -1,51 +1,30 @@
-# Hello React
+🚀 JustFoodie: Created a ReactJS masterpiece in front! 🍔 Seamless, stylish, and delicious. Explore a world of flavors with a click. React JS brilliance for a swift, savory journey. Join the feast now! 🌐🍕 #JustFoodie #ReactJS
 
-# Parcel
-- Dev Build 
-- Local Server
-- Hot Module replecement
-- File watching Algorithm - written in c++
-- Caching - faster builds
-- Image Optimization
-- Minification
-- Bundling
-- Compress
-- Consistent hashing
-- Code Splitting
-- Differential Bundling - support older browsers
-- Diagnostic
-- Error Handling
-- HTTPs
-- Tree Shaking - remove unused code
-- Different dev and prod bundles
+Key features & tech stack:
+✅ Parcel.js for bundling - ensuring a fast and efficient build process
+✅ React.js for robust functionality, utilizing functional & class components, inbuilt hooks, and custom hooks
+✅ Inbuilt hooks (useState, useEffect, useContext) for seamless state management and side effects
+✅ Swiggy's Public API integration for fetching restaurant lists and menus
 
+✅ JustFoodie has now weaved in Swiggy's Public API, conjuring up restaurant lists and menus with the enchantment of lazy loading, higher-order functions, and lifted states! 🍔🌐 #JustFoodieEnchant #SwiggyAPI ✨🍽️
 
-# 2 types routing in web apps
-- client side routing
-- server side routing
+🪄 Custom hooks magic:
+🔸 useRestaurantMenu: fetches menu items for a selected restaurant
 
-# Redux Toolkit
-- Install @reduxjs/toolkit and react-redux
-- Build our store
-- connect our store to the app
-- Slice (cartSlice)
-- dispatch(action)
-- Slector
+⚡ Performance boosters:
+🔸 Loading components on-demand using different chunks
+🔸 Shimmer component for a more polished UI
+
+🎨 Design & Navigation:
+🔸 Tailwind CSS for a sleek and modern UI
+🔸 React Router for easy and efficient routing
+
+🔄 State Management:
+🔸 Redux Toolkit for a centralized and easy-to-understand state management system
+
+#React #css #tech #AkshaySaini #Parceljs #Firebase #TailwindCSS #ReduxToolkit #WebDevelopment #FoodOrderingApp
 
 
-# Types of testing (Developer)
-- Unit Testing
-- Integration Testing 
-- End to End Testing - e2e testing
 
-# Setting up Testing in our app
-- Install React testing library
-- Install Jest
-- Install Babel dependencies
-- Configured Babel
-- Configure Parcel Config file to disable default babel transpilation
-- jest Configuration : npx jest --init
-- Install jsdom library
-- Install @babel/preset-react - to make JSX work in test cases
-- include @babel/preset-react inside my babel config
-- Install : npm i -D @testing-library/jest-dom
+Github Link : - https://lnkd.in/de9TUZFA
+Live Link : - https://lnkd.in/dX7nf6c9
