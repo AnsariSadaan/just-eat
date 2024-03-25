@@ -13,7 +13,6 @@ const Dishes = () => {
         try {
             const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9777315&lng=72.8273249&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
             const json = await data.json();
-            console.log(json);
             setTitle(json?.data?.cards[0]?.card?.card?.header?.title);
             setDish(json?.data?.cards[0]?.card?.card?.imageGridCards?.info || []); // Provide fallback for dish
         } catch (error) {
